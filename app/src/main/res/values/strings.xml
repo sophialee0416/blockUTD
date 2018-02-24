@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">blockUTD</string>
+    <string name="onOffDesc">Activates/deactivates the app.</string>
 </resources>
