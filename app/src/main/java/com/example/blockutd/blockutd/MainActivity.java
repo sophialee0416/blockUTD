@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private UsageStatsManager usageStatsManager;
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         int mode = appOps.checkOpNoThrow(OPSTR_GET_USAGE_STATS, Process.myUid(), context.getPackageName());
         usageStatsManager = (UsageStatsManager) context.getSystemService(Context.USAGE_STATS_SERVICE);
 
-        List<UsageStats> stats = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY, beginTime,
+        stats = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_WEEKLY, beginTime,
         endTime);
 
         return mode == MODE_ALLOWED;
