@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">blockUTD</string>
+    <string name="onOffDesc">Activates/deactivates the app.</string>
+    <string name="onOffText">Block now!</string>
+    <string name="ethereumDesc">Picture of Ethereum</string>
 </resources>
