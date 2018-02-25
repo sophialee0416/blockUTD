@@ -11,6 +11,24 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"
+            android:id="@+id/totalTime"
+            android:text="Total time: 1000 minutes"/>
+
+        <TextView
+            android:id="@+id/totalOwed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalTime"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:text="You owe 0.1 ether" />
+
+        <TextView
             android:id="@+id/onOffText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,12 +45,13 @@
             android:layout_height="wrap_content"
             android:background="#fff"
             android:contentDescription="@string/onOffDesc"
-            app:srcCompat="@drawable/bemoji" />
+            app:srcCompat="@drawable/bemoji"
+            android:onClick="apps_blocked" />
 
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="106dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
@@ -53,7 +72,8 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:text="@string/etherMoney"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:onClick="convertEther"/>
 
     </LinearLayout>
 

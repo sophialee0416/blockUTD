@@ -6,55 +6,97 @@
     android:layout_height="match_parent"
     tools:context="com.example.blockutd.blockutd.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/onOffText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/imageButton"
-            android:layout_centerHorizontal="true"
-            android:text="@string/onOffText"
-            android:textSize="20dp"
-            android:textStyle="italic" />
-        <ImageButton
-            android:id="@id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
-            android:background="#fff"
-            android:contentDescription="@string/onOffDesc"
-            app:srcCompat="@drawable/bemoji" />
-
-    </RelativeLayout>
-
     <LinearLayout
-        android:layout_width="106dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:paddingBottom="10dp"
-        tools:ignore="UseCompoundDrawables">
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
 
-        <ImageView
-            android:id="@+id/ethereumButton"
-            android:layout_width="39dp"
-            android:layout_height="44dp"
-            android:contentDescription="@string/ethereumDesc"
-            app:srcCompat="@drawable/ethereum" />
 
         <TextView
-            android:id="@+id/etherQuantity"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="@string/etherMoney"
-            android:textSize="28sp" />
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:id="@+id/title"
+            android:text="block"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textColor="#1d3261"
+            android:layout_alignRight="@id/title"
+            android:id="@+id/title2"
+            android:text="UTD"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <CheckBox android:id="@+id/fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
+                android:text="Facebook"/>
+            <CheckBox android:id="@+id/instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
+                android:text="Instagram"/>
+            <CheckBox android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:text="Twitter"/>
+            <CheckBox android:id="@+id/snapchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:text="Snapchat"/>
+            <CheckBox android:id="@+id/reddit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:text="Reddit"/>
+            <CheckBox android:id="@+id/youtube"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="YouTube"/>
+            <CheckBox android:id="@+id/netflix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:text="Netflix"/>
+            <CheckBox android:id="@+id/tumblr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
+                android:text="Tumblr"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                android:text="Save\nSettings"
+                android:onClick="saveSettings"/>
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
