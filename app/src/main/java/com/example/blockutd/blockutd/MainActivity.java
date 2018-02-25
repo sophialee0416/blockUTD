@@ -8,18 +8,26 @@ import android.widget.ImageView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
+
+    static final String URL = "https://api.androidhive.info/pizza/?format=xml";
+
+
+    // XML node keys
+    static final String KEY_ITEM = "item";
+    static final String KEY_ID = "id";
+    static final String KEY_NAME = "name";
+    static final String KEY_COST = "cost";
+    static final String KEY_DESC = "description";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ImageButton bButton = findViewById(R.id.imageButton);
-        bButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-            }
-        });
     }
 }
